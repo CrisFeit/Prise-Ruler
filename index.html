@@ -1,48 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<section class="prise js--prise">
+<head>
+  <meta charset="UTF-8">
+  <title>Regua de Recompensa</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="manualStyle.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-  <div class="prise__text prise__text--show js--prise-item" data-limit="1">
-    <p class="prise__text-content">
-      Ganhe frete grátis nas compras acima de R$ 109,00!
-    </p>
-    <div class="prise__track js--prise-track"></div>
-  </div>
+  <style>
+    html,
+    body {
+      min-width: 290px;
+      color: #4d4e53;
+      background-color: #ffffff;
+      font-family: 'Open Sans', Arial, sans-serif;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    #navbar {
+      position: fixed;
+      min-width: 290px;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      height: 100%;
+      border-right: solid;
+      border-color: rgba(0, 22, 22, 0.4)
+    }
+
+    header {
+      color: black;
+      font-size: 30px;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: thin;
+    }
+
+    #main-doc header {
+      text-align: left;
+      margin: 0px;
+    }
+
+    #navbar ul {
+      height: 88%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #navbar li {
+      color: #4d4e53;
+      border: 1px solid;
+      border-bottom-width: 0px;
+      padding: 8px;
+      padding-left: 45px;
+      list-style: none;
+      position: relative;
+      left: -50px;
+      width: 100%;
+
+    }
+
+    #navbar a {
+      color: #4d4e53;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #main-doc {
+      position: absolute;
+      margin-left: 310px;
+      padding: 20px;
+      margin-bottom: 110px;
+    }
+
+    section article {
+      color: #4d4e53;
+      margin: 15px;
+      font-size: 0.96em;
+    }
+
+    section li {
+      margin: 15px 0px 0px 20px;
+    }
+
+    code {
+      display: block;
+      text-align: left;
+      white-space: pre;
+      position: relative;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 2;
+      background-color: #f7f7f7;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    @media only screen and (max-width: 815px) {
+
+      /* For mobile phones: */
+      #navbar ul {
+        border: 1px solid;
+        height: 207px;
+      }
+
+      #navbar {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+      }
+
+      #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
+      }
+
+      #main-doc section {
+        /*     padding-top: 240px; */
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      #main-doc {
+        margin-left: -10px;
+      }
+
+      code {
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>Regua de Recompensa</header>
+    <ul>
+      <a class="nav-link" href="#Introducao" rel="internal">
+        <li>Introducao</li>
+      </a>
+      <a class="nav-link" href="#local" rel="internal">
+        <li>Localização</li>
+      </a>
+      <a class="nav-link" href="#func" rel="internal">
+        <li>Funcionalidades</li>
+      </a>
+      <a class="nav-link" href="#config" rel="internal">
+        <li>Configuração</li>
+      </a>
   
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introducao">
+      <header>Introducao</header>
+      <hr>
+      <article>
 
-  
-    <div class="prise__text js--prise-item" 
-      data-limit="10900" 
-      data-cupom="" >
-      <p class="prise__text-content">
-        com mais <span class="prise__remain">0</span> ganhe frete grátis!
-      </p>
-      <div class="prise__track js--prise-track"></div>
-    </div>
+        <p>A regua de recompenas (Prise Ruler) serve para o controle de visualização do status de bonus e descontos que
+          o usuário ganha conforme aumenta ou diminui o valor suas compras</p>
+        <p>É a partir do valor Total (com ou sem descontos) que é calculado as regras de negócio</p>
+        <p>Para seu funcionamento, é necessário:</p>
 
-    <div class="prise__text js--prise-item"
-       data-limit="19900" 
-       data-cupom="Frete Gr&#225;tis" >
-      <p class="prise__text-content">
-        com mais <span class="prise__remain">0</span> você ganha um cupom de R$40,00 !
-      </p>
-      <div class="prise__track js--prise-track"></div>
-    </div>
+        <li>Estar ativado no CMS da Vtex.</li>
+        <li>Pelo menos uma regra configurada na régua.</li>
+        <li>Possuir algum item no minicart / sacola.</li>
 
-    <div class="prise__text js--prise-end" 
-       data-limit="99999999" 
-       data-cupom="Frete Gr&#225;tis / Cupom R$ 40,00" >
-      <p class="prise__text-content prise__text-content--complete">
-        Você Ganhou Frete Grátis + R$ 40,00 em desconto
-      </p>
-      <div class="prise__track prise__track--complete js--prise-track"></div>
-    </div>
+        <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-intro.png" alt="Regua de recompensas"></p>
 
-</section>
+      </article>
+    </section>
 
+    <section class="main-section" id="local">
+      <header>Localização</header>
+      <hr>
+      <article>
+        <p>A regua é um - Custom Element - com o nome de <strong>Prise-Ruler</strong> localizada no CMS(Content
+          Management System) da Vtex em :<br>
+          <a href="http://edbr.myvtex.com/admin/a/">https://edbr.myvtex.com/admin/a</a> ou
+          <a href="http://edbr.vtexcommercestable.com.br/admin/a/">https://edbr.vtexcommercestable.com.br/admin/a</a>
+        </p>
 
+        <p>Na página de CMS selecione:
+          <ol>
+            <li>Custom Elements</li>
+            <li>Prise-Ruler</li>
+            <li>Update</li>
+          </ol>
+        </p>
+        <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-local1.png"></p>
+        <p>Na página de Custom Element:
+          <ol>
+            <li>Ative a regra que ira subir</li>
+            <li>selecione edit</li>
+          </ol>
+        </p>
+        <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-local2.png"></p>
+      </article>
+    </section>
+    <section class="main-section" id="func">
+      <header>Funcionalidades</header>
+      <hr>
+      <article>
+        <p>Código Html da Regua</p>
+        <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-code3.png"></p>
+        <p>Cada Section de classe "js--prise-item" são um conjunto de elementos que trocam de acordo com a o valor total
+          do minicart do usuário<p>
+            <p>Os atributos que interagem com o codigo javascript são</p>
+            <code>
+            data-limit : valor a ser alcançado para que o usuário ganhe o premio
+            *A Section contendo a frase que irá ser mostrada é a qual o valor total do usuário for :
+            <strong>maior</strong> do que o data-limit da Section anterior
+            <strong>menor</strong> do que o data-limit da Section atual
+          </code>
+            <p>Exemplo:</p>
+            <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-limit.png"></p>
+            <code>
+              data-cupom : premio já alcançado pelo usuário
+              *Quando houver mais de um premio estes devem ser separado por /
+            </code>
+            <p>Exemplo:</p>
+            <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-cupom.png"></p>
+      </article>
+    </section>
 
+    <section class="main-section" id="config">
+      <header>Configuração</header>
+      <hr>
+      <article>
+        <p>Poderá ser alterado somente os valores dos itens.</p>
+        <ul>
+          <li>data-limit : não deve conter nenhum caracter que não seja números <br>exemplo:
+            <code>
+            R$ 109,00
+            data-limit="10900"
+          </code>
+          </li>
+          <li>data-cupom : quando não hover prêmios deixar em brando <br>exemplo:
+            <code>
+            data-cupom=""
+          </code>
+          </li>
+          <li>A frase a ser exibida : Deixe o valor do meio sempre em 0 <br>exemplo
+            <code>
+               < p> class="prise__text-content">
+                  com mais  < span class="prise__remain" > 0 < /span> ganhe frete grátis!
+              < /p>
 
+               < p class="prise__text-content">
+                  com mais < span class="prise__remain"> 0 </ span> você ganha um cupom de R$40,00 !
+              < /p>
 
-<!-- Alter aqui as proriedades data-limit & data-cupom e a frase exibida -->
-<!-- Alter aqui as proriedades data-limit & data-cupom e a frase exibida-->
-<!-- Alter aqui somente o data-cupom e a frase exibida-->
+               < p class="prise__text-content prise__text-content--complete">
+                  Você Ganhou Frete Grátis + R$ 40,00 em desconto
+              < /p>
+
+          </code>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+</body>
+
+</html>
