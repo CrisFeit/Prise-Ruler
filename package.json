@@ -1,0 +1,24 @@
+{
+  "name": "prise-ruler",
+  "version": "1.0.0",
+  "description": "Regua Reguladora de Premios",
+  "main": "index.js",
+  "scripts": {
+      "start": "gulp --color && gulp watch --color",
+      "build": "gulp --color",
+      "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisFeit/Prise-Ruler.git"
+  },
+  "author": "https://github.com/CrisFeit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisFeit/Prise-Ruler/issues"
+  },
+  "homepage": "https://cristrocha.github.io/Prise-Ruler",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
