@@ -5,10 +5,6 @@
   <meta charset="UTF-8">
   <title>Regua de Recompensa</title>
   <meta charset="utf-8">
-  <link type="text/css" rel="stylesheet" href="manualStyle.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
   <style>
     html,
     body {
@@ -159,8 +155,8 @@
   <nav id="navbar">
     <header>Regua de Recompensa</header>
     <ul>
-      <a class="nav-link" href="#Introducao" rel="internal">
-        <li>Introducao</li>
+      <a class="nav-link" href="#intro" rel="internal">
+        <li>Introdução</li>
       </a>
       <a class="nav-link" href="#local" rel="internal">
         <li>Localização</li>
@@ -175,13 +171,13 @@
     </ul>
   </nav>
   <main id="main-doc">
-    <section class="main-section" id="Introducao">
-      <header>Introducao</header>
+    <section class="main-section" id="intro">
+      <header>Introdução</header>
       <hr>
       <article>
 
         <p>A regua de recompenas (Prise Ruler) serve para o controle de visualização do status de bonus e descontos que
-          o usuário ganha conforme aumenta ou diminui o valor suas compras</p>
+          o usuário ganha conforme aumenta ou diminui o valor de suas compras</p>
         <p>É a partir do valor Total (com ou sem descontos) que é calculado as regras de negócio</p>
         <p>Para seu funcionamento, é necessário:</p>
 
@@ -227,11 +223,11 @@
       <article>
         <p>Código Html da Regua</p>
         <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-code3.png"></p>
-        <p>Cada Section de classe "js--prise-item" são um conjunto de elementos que trocam de acordo com a o valor total
+        <p>Cada Section de classe "js--prise-item" é um conjunto de elementos que trocam de acordo com a o valor total
           do minicart do usuário<p>
-            <p>Os atributos que interagem com o codigo javascript são</p>
+            <p>Os atributos que interagem com o código javascript são</p>
             <code>
-            data-limit : valor a ser alcançado para que o usuário ganhe o premio
+            data-limit : valor a ser alcançado para que o usuário ganhe o prêmio
             *A Section contendo a frase que irá ser mostrada é a qual o valor total do usuário for :
             <strong>maior</strong> do que o data-limit da Section anterior
             <strong>menor</strong> do que o data-limit da Section atual
@@ -239,8 +235,8 @@
             <p>Exemplo:</p>
             <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-limit.png"></p>
             <code>
-              data-cupom : premio já alcançado pelo usuário
-              *Quando houver mais de um premio estes devem ser separado por /
+              data-cupom : prêmio já alcançado pelo usuário
+              *Quando houver mais de um prêmio , estes devem ser separado por /
             </code>
             <p>Exemplo:</p>
             <p><img src="https://edbr.vtexcommercestable.com.br/arquivos/regua-cupom.png"></p>
@@ -271,7 +267,7 @@
               < /p>
 
                < p class="prise__text-content">
-                  com mais < span class="prise__remain"> 0 </ span> você ganha um cupom de R$40,00 !
+                  com mais < span class="prise__remain" > 0 </ span> você ganha um cupom de R$40,00 !
               < /p>
 
                < p class="prise__text-content prise__text-content--complete">
