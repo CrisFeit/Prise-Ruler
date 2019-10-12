@@ -1,7 +1,7 @@
 {
   "name": "prise-ruler",
   "version": "1.0.0",
-  "description": "Regua Reguladora de Premios",
+  "description": "Barra Progressiva Reguladora de Premios",
   "main": "index.js",
   "scripts": {
       "start": "gulp --color && gulp watch --color",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/CrisFeit/Prise-Ruler/issues"
   },
-  "homepage": "https://cristrocha.github.io/Prise-Ruler",
+  "homepage": "https://crisfeit.github.io/Prise-Ruler",
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
